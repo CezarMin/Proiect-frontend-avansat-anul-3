@@ -1,0 +1,32 @@
+<div class="container my-5">
+    <h1 class="mb-3">Employees</h1>
+    <table class="table" *ngIf="employees">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Department</th>
+                <th>Salary</th>
+                <th>Workhours</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let employee of employees">
+                <td>{{ employee.firstName }} {{ employee.lastName }}</td>
+                <td>{{ employee.email }}</td>
+                <td>{{ employee.department}}</td>
+                <td>{{ employee.salary }}</td>
+                <td>{{ employee.workHours }}</td>
+                <td class="d-flex" style="flex-shrink: 0;">
+                    <button (click) = "editEmployee(employee.id)">
+                        <i class="bi bi-pencil-square"></i>
+                    </button>
+                    <button class="ms-2">
+                        <i class="bi bi-trash"></i>
+                    </button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <p *ngIf="!employees">No employees currently found</p>
+</div>

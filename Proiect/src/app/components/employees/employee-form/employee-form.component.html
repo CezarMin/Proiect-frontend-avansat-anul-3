@@ -1,0 +1,31 @@
+<div class ="container my-5">
+    <div class = "mb-3">
+        <form *ngIf = "newEmployee" #form="ngForm">
+            <div>
+                <label for="firstName" class="form-label">First name</label>
+                <input input class="form-control" type = "text" id="firstName" name="firstName" [(ngModel)] = "newEmployee.firstName">
+            </div>
+            <div>
+                <label for="lastName" class="form-label">Last name</label>
+                <input class="form-control" type = "text" id="lastName" name="lastName" [(ngModel)] = "newEmployee.lastName">
+            </div>
+            <div>
+                <label for="department" class="form-label">Department</label>
+                <input class="form-control" type = "text" id="department" name="department" [(ngModel)] = "newEmployee.department">
+            </div>
+            <div>
+                <label for="email" class="form-label">Email</label>
+                <input class="form-control" type = "text" id="email" name="email" [(ngModel)] = "newEmployee.email">
+            </div>
+            <div>
+                <label for="salary" class="form-label">Salary</label>
+                <input class="form-control" type = "number" id="salary" name="salary" [(ngModel)] = "newEmployee.salary">
+            </div>
+            <div>
+                <label for="workHours" class="form-label">Work hours</label>
+                <input class="form-control" type = "number" id="workHours" name="workHours" [(ngModel)] = "newEmployee.workHours">
+            </div>
+            
+        </form>
+    </div>
+</div>
